@@ -31,5 +31,14 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   extra: {
     ...ClientEnv,
   },
+  plugins: [
+    [
+      'expo-notifications',
+      {
+        icon: './local/assets/icon.png',
+        color: '#ffffff',
+      },
+    ],
+  ],
   // .. sentry config and other stuff here
 });
