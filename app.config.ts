@@ -20,13 +20,14 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   assetBundlePatterns: ['**/*'],
   ios: {
     supportsTablet: true,
-    // bundleIdentifier: Env.BUNDLE_ID,
+    bundleIdentifier: 'com.rimancete.notifications',
   },
   android: {
     adaptiveIcon: {
       foregroundImage: './src/assets/adaptive-icon.png',
       backgroundColor: '#fff',
     },
+    package: 'com.rimancete.notifications',
   },
   extra: {
     ...ClientEnv,
@@ -38,7 +39,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       'expo-notifications',
       {
-        icon: './local/assets/icon.png',
+        icon: './src/assets/icon.png',
         color: '#ffffff',
       },
     ],

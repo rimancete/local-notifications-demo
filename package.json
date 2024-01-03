@@ -2,17 +2,17 @@
   "name": "expo-base",
   "version": "1.0.0",
   "scripts": {
-    "start": "APP_ENV=development expo start --clear",
+    "start": "expo start --dev-client",
     "start:staging": "APP_ENV=staging expo start --clear",
     "build:production": "APP_ENV=production expo start --clear",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "expo": "~48.0.15",
+    "expo": "~48.0.21",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.14",
@@ -20,7 +20,8 @@
     "zod": "^3.21.4",
     "expo-notifications": "~0.18.1",
     "expo-device": "~5.2.1",
-    "expo-constants": "~14.2.1"
+    "expo-constants": "~14.2.1",
+    "expo-splash-screen": "~0.18.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
